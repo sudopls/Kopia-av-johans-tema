@@ -4,7 +4,7 @@ get_header();
 
 <div class="container">
 
-	<h1>index</h1>
+	<h1>index.php</h1>
 
 	<hr />
 
@@ -29,7 +29,7 @@ get_header();
 					</div>
 
 					<div class="card-text">
-						<?php the_content(); ?>
+						<?php the_excerpt(); ?>
 					</div>
 				</div>
 			</article>
