@@ -4,7 +4,9 @@ get_header();
 
 <div class="container">
 
-	<pre>index.php</pre>
+	<pre>category.php</pre>
+
+	<h1>Category: <?php single_cat_title(); ?></h1>
 
 	<hr />
 

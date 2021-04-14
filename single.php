@@ -4,7 +4,7 @@ get_header();
 
 <div class="container">
 
-	<h1>single.php</h1>
+	<pre>single.php</pre>
 
 	<hr />
 
@@ -18,7 +18,7 @@ get_header();
 				the_post();
 			?>
 			<article>
-				<h2><?php the_title(); ?></h2>
+				<h1><?php the_title(); ?></h1>
 
 				<div class="card-meta text-muted small mb-2">
 					Post published <?php echo get_the_date(); ?> at <?php the_time(); ?> by <?php the_author(); ?> in <?php the_category(', '); ?>
