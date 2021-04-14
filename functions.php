@@ -7,6 +7,12 @@ require_once('includes/Bootstrap_5_WP_Nav_Menu_Walker.php');
  */
 add_theme_support('title-tag');
 
+function mbt_register_scripts_and_styles() {
+	// Bootstrap 5
+	wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css', [], '5.0.0-beta3', 'all');
+}
+add_action('wp_enqueue_scripts', 'mbt_register_scripts_and_styles');
+
 /**
  * Change length of auto-generated excerpt.
  *
