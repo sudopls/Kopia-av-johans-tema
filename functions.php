@@ -13,6 +13,9 @@ function mbt_register_scripts_and_styles() {
 
 	// Theme styles
 	wp_enqueue_style('mbt', get_parent_theme_file_uri('style.css'), ['bootstrap'], '0.1', 'all');
+
+	// Print styles
+	wp_enqueue_style('mbt-print', get_parent_theme_file_uri('print.css'), ['bootstrap'], '0.1', 'print');
 }
 add_action('wp_enqueue_scripts', 'mbt_register_scripts_and_styles');
 
