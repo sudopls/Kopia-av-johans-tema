@@ -15,8 +15,7 @@ add_theme_support('post-thumbnails');
 /**
  * Declare our own image size for archives
  */
-add_image_size('category-thumb', 450, 450);
-
+add_image_size('featured-image-thumb', 520, 9999);
 
 /**
  * Register neccessary scripts and styles.
