@@ -13,6 +13,12 @@ add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
 
 /**
+ * Declare our own image size for archives
+ */
+add_image_size('category-thumb', 450, 450);
+
+
+/**
  * Register neccessary scripts and styles.
  *
  * @return void
