@@ -20,23 +20,34 @@ get_header();
 						the_post();
 					?>
 					<article class="card mb-4">
-						<div class="card-body">
-							<h2 class="card-title h4">
-								<a href="<?php the_permalink(); ?>">
-									<?php the_title(); ?>
-								</a>
-							</h2>
-							<div class="card-meta text-muted small mb-2">
-								Post published <?php echo get_the_date(); ?> at <?php the_time(); ?> by <?php the_author(); ?> in <?php the_category(', '); ?>
-							</div>
+						<div class="row g-0">
 
-							<div class="card-text">
-								<!-- before the_excerpt(); -->
-								<?php the_excerpt(); ?>
-								<!-- after the_excerpt(); -->
-							</div>
+							<div class="col-md-4">
+								<!-- <img src="https://placekitten.com/150/150" class="img-fluid"> -->
+								<?php the_post_thumbnail('post-thumbnail', ['class' => 'img-fluid']); ?>
+							</div><!-- /.col-md-4 -->
 
-						</div>
+							<div class="col-md-8">
+								<div class="card-body">
+									<h2 class="card-title h4">
+										<a href="<?php the_permalink(); ?>">
+											<?php the_title(); ?>
+										</a>
+									</h2>
+									<div class="card-meta text-muted small mb-2">
+										Post published <?php echo get_the_date(); ?> at <?php the_time(); ?> by <?php the_author(); ?> in <?php the_category(', '); ?>
+									</div>
+
+									<div class="card-text">
+										<!-- before the_excerpt(); -->
+										<?php the_excerpt(); ?>
+										<!-- after the_excerpt(); -->
+									</div>
+								</div>
+							</div><!-- /.col-md-8 -->
+
+						</div><!-- /.row -->
+
 					</article>
 					<!-- End post -->
 				<?php endwhile; ?>

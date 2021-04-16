@@ -8,6 +8,11 @@ require_once('includes/Bootstrap_5_WP_Nav_Menu_Walker.php');
 add_theme_support('title-tag');
 
 /**
+ * Declare support for post-thumbnails.
+ */
+add_theme_support('post-thumbnails');
+
+/**
  * Register neccessary scripts and styles.
  *
  * @return void
