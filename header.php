@@ -9,6 +9,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<?php wp_body_open(); ?>
+
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<div class="container">
 			<a class="navbar-brand" href="/">
