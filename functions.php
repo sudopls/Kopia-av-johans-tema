@@ -7,6 +7,11 @@ require_once('includes/Bootstrap_5_WP_Nav_Menu_Walker.php');
  */
 add_theme_support('title-tag');
 
+/**
+ * Register neccessary scripts and styles.
+ *
+ * @return void
+ */
 function mbt_register_scripts_and_styles() {
 	/**
 	 * Styles
