@@ -3,7 +3,9 @@
 	<?php if (has_post_thumbnail()) : ?>
 		<div class="row g-0">
 			<div class="col-md-4">
-				<?php the_post_thumbnail('featured-image-thumb', ['class' => 'img-fluid']); ?>
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail('featured-image-thumb', ['class' => 'img-fluid']); ?>
+				</a>
 			</div><!-- /.col-md-4 -->
 
 			<div class="col-md-8">
