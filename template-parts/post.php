@@ -9,20 +9,25 @@
 			<div class="col-md-8">
 	<?php endif; ?>
 				<div class="card-body">
-					<h2 class="card-title h4">
-						<a href="<?php the_permalink(); ?>">
-							<?php the_title(); ?>
-						</a>
-					</h2>
-					<div class="card-meta text-muted small mb-2">
-						Post published <?php echo get_the_date(); ?> at <?php the_time(); ?> by <?php the_author(); ?> in <?php the_category(', '); ?>
-					</div>
+					<header>
+						<h2 class="card-title h4">
+							<a href="<?php the_permalink(); ?>">
+								<?php the_title(); ?>
+							</a>
+						</h2>
+					</header>
 
 					<div class="card-text">
 						<!-- before the_excerpt(); -->
 						<?php the_excerpt(); ?>
 						<!-- after the_excerpt(); -->
 					</div>
+
+					<footer>
+						<div class="card-meta text-muted small mb-2">
+							Post published <?php echo get_the_date(); ?> at <?php the_time(); ?> by <?php the_author(); ?> in <?php the_category(', '); ?>
+						</div>
+					</footer>
 				</div>
 	<?php if (has_post_thumbnail()) : ?>
 			</div><!-- /.col-md-8 -->

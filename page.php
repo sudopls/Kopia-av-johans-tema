@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="container">
+<main class="container">
 
 	<pre>page.php</pre>
 
@@ -30,7 +30,7 @@ get_header();
 		<p>Sorry, no post found.</p>
 	<?php endif; ?>
 
-</div>
+</main>
 
 <?php
 get_footer();

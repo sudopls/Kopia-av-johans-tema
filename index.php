@@ -2,7 +2,9 @@
 get_header();
 ?>
 
-<div class="container">
+<main class="container mt-3">
+
+	<h1>Blogg</h1>
 
 	<pre>index.php</pre>
 
@@ -27,12 +29,12 @@ get_header();
 			<?php endif; ?>
 		</div><!-- /.col-md-9 -->
 
-		<div class="col-md-3 sidebar">
+		<aside class="col-md-3 sidebar">
 			<?php get_sidebar(); ?>
-		</div><!-- /.col-md-3 -->
+		</aside><!-- /.col-md-3 -->
 
 	</div><!-- /.row -->
-</div><!-- /.container -->
+</main><!-- /.container -->
 
 <?php
 get_footer();
