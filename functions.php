@@ -55,6 +55,11 @@ function mbt_theme_setup() {
 }
 add_action('after_setup_theme', 'mbt_theme_setup');
 
+/**
+ * Output custom logo (if set, otherwise output site title).
+ *
+ * @return void
+ */
 function mbt_navbar_brand() {
 	$custom_logo_id = get_theme_mod('custom_logo');
 	$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
