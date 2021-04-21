@@ -56,6 +56,36 @@ function mbt_theme_setup() {
 add_action('after_setup_theme', 'mbt_theme_setup');
 
 /**
+ * Register theme modifications in WP Customizer
+ *
+ * @param WP_Customize_Manager $wp_customizer
+ * @return void
+ */
+function mbt_customizer($wp_customizer) {
+	// Header Textcolor
+	$wp_customizer->add_setting('header_textcolor', [
+		'default' => '#222222',
+	]);
+}
+add_action('customize_register', 'mbt_customizer');
+
+/**
+ * Output neccessary CSS for our theme modifications in WP Customizer.
+ *
+ * @return void
+ */
+function mbt_wp_head_customizer_css() {
+	?>
+		<style>
+			#site-header .header-text-wrapper {
+				color: #<?php echo get_theme_mod('header_textcolor'); ?>;
+			}
+		</style>
+	<?php
+}
+add_action('wp_head', 'mbt_wp_head_customizer_css');
+
+/**
  * Output custom logo (if set, otherwise output site title).
  *
  * @return void
