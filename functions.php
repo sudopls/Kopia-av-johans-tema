@@ -80,6 +80,30 @@ function mbt_filter_the_excerpt($excerpt) {
 add_filter('the_excerpt', 'mbt_filter_the_excerpt');
 
 /**
+ * Filters content from bad words and replaces them with asterisk.
+ *
+ * @param string $content The content to be filtered
+ * @return string The filtered content
+ */
+function mbt_filter_bad_words($content) {
+	$bad_words_raw = file_get_contents(get_parent_theme_file_path('includes/bad_words.txt'));
+	$bad_words_raw = trim($bad_words_raw);
+	$bad_words = explode("\n", $bad_words_raw);
+	$censored_words = [];
+
+	foreach ($bad_words as $bad_word) {
+		$len = strlen($bad_word);
+		$censored_word = str_repeat('*', $len);
+		array_push($censored_words, $censored_word);
+	}
+
+	return str_ireplace($bad_words, $censored_words, $content);
+}
+add_filter('the_content', 'mbt_filter_bad_words');
+add_filter('the_excerpt', 'mbt_filter_bad_words');
+add_filter('the_title', 'mbt_filter_bad_words');
+
+/**
  * Register navigation menus.
  */
 function mbt_register_nav_menus() {
