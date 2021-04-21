@@ -3,19 +3,48 @@
 require_once('includes/Bootstrap_5_WP_Nav_Menu_Walker.php');
 
 /**
- * Declare support for title-tag.
+ * Setup theme.
+ *
+ * @return void
  */
-add_theme_support('title-tag');
+function mbt_theme_setup() {
 
-/**
- * Declare support for post-thumbnails.
- */
-add_theme_support('post-thumbnails');
+	/**
+	 * Declare support for title-tag.
+	 */
+	add_theme_support('title-tag');
 
-/**
- * Declare our own image size for archives
- */
-add_image_size('featured-image-thumb', 520, 9999);
+	/**
+	 * Declare support for post-thumbnails.
+	 */
+	add_theme_support('post-thumbnails');
+
+	/**
+	 * Declare support for custom logo.
+	 */
+	add_theme_support('custom-logo', [
+		'height' => 50,
+		'width' => 200,
+	]);
+
+	/**
+	 * Declare our own image size for archives
+	 */
+	add_image_size('featured-image-thumb', 520, 9999);
+
+}
+add_action('after_setup_theme', 'mbt_theme_setup');
+
+function mbt_navbar_brand() {
+	$custom_logo_id = get_theme_mod('custom_logo');
+	$logo = wp_get_attachment_image_src($custom_logo_id, 'full');
+
+	if ($logo) {
+		echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
+	} else {
+		echo get_bloginfo('name');
+	}
+}
 
 /**
  * Register neccessary scripts and styles.
