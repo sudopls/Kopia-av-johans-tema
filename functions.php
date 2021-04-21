@@ -28,6 +28,26 @@ function mbt_theme_setup() {
 	]);
 
 	/**
+	 * Declare support for custom header image.
+	 */
+	add_theme_support('custom-header', [
+		// Display the header text along with the image
+		'header-text' => true,
+
+		// Header image width (in pixels)
+		'width' => 2560,
+
+		// Header image height (in pixels)
+		'height' => 500,
+
+		// Allow flexible image width
+		'flex-width' => true,
+
+		// Allow flexible image height
+		'flex-height' => true,
+	]);
+
+	/**
 	 * Declare our own image size for archives
 	 */
 	add_image_size('featured-image-thumb', 520, 9999);
