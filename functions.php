@@ -66,6 +66,23 @@ function mbt_customizer($wp_customizer) {
 	$wp_customizer->add_setting('header_textcolor', [
 		'default' => '#222222',
 	]);
+
+	// Header Textshadow Color
+	$wp_customizer->add_setting('header_textshadow_color', [
+		'default' => '#dddddd',
+	]);
+	$wp_customizer->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customizer,
+			'header_textshadow_color',
+			[
+				'label' => 'Header Textshadow Color',			// Admin-visible name of the control
+				'setting' => 'header_textshadow_color',			// Which setting to load and manipulate
+				'section' => 'colors', 							// ID of the section this control should render in
+				'sanitize_callback' => 'sanitize_hex_color',	// Sanitize HEX color
+			]
+		)
+	);
 }
 add_action('customize_register', 'mbt_customizer');
 
@@ -79,6 +96,7 @@ function mbt_wp_head_customizer_css() {
 		<style>
 			#site-header .header-text-wrapper {
 				color: #<?php echo get_theme_mod('header_textcolor'); ?>;
+				text-shadow: 0px 0px 4px <?php echo get_theme_mod('header_textshadow_color'); ?>;
 			}
 		</style>
 	<?php
