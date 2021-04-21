@@ -83,6 +83,28 @@ function mbt_customizer($wp_customizer) {
 			]
 		)
 	);
+
+	// Blog Section
+	$wp_customizer->add_section('mbt_blog', [
+		'title' => 'Blog Settings',
+		'priority' => 30,
+	]);
+
+	// Blog sidebar
+	$wp_customizer->add_setting('blog_sidebar', [
+		'default' => 'right',
+	]);
+	$wp_customizer->add_control('blog_sidebar', [
+		'label' => 'Blog Sidebar Location',
+		'description' => 'This applies to devices ≥768px.',
+		'setting' => 'blog_sidebar',
+		'section' => 'mbt_blog',
+		'type' => 'radio',
+		'choices' => [
+			'left' => 'Left',
+			'right' => 'Right',
+		],
+	]);
 }
 add_action('customize_register', 'mbt_customizer');
 
