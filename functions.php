@@ -395,7 +395,7 @@ function mbt_register_cpt() {
 		],
 	]);
 }
-add_action('init', 'mbt_register_cpt');
+// add_action('init', 'mbt_register_cpt');
 
 /**
  * Register widget areas (a.k.a. sidebars).
