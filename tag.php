@@ -9,13 +9,13 @@ if (get_theme_mod('blog_sidebar') === 'left') {
 }
 ?>
 
-<main class="container mt-3">
+<main class="container">
+
+	<pre>tag.php</pre>
 
 	<?php if (!get_header_image()) : ?>
-		<h1>Blog</h1>
+		<h1><?php single_tag_title('Tag: '); ?></h1>
 	<?php endif; ?>
-
-	<pre>home.php</pre>
 
 	<hr />
 
@@ -34,7 +34,7 @@ if (get_theme_mod('blog_sidebar') === 'left') {
 					<!-- End post -->
 				<?php endwhile; ?>
 			<?php else: ?>
-				<p>Sorry, no posts found.</p>
+				<p>Sorry, no posts found with this tag.</p>
 			<?php endif; ?>
 		</div><!-- /.col-md-9 -->
 
