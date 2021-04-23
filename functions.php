@@ -240,12 +240,19 @@ function mbt_navbar_brand() {
 
 function mbt_post_meta($display = true) {
 	$post_meta = sprintf(
-		"Post published %s at %s by %s in %s",
+		"Post published %s at %s by %s",
 		get_the_date(),
 		get_the_time(),
-		get_the_author(),
-		get_the_category_list(', ')
+		get_the_author()
 	);
+
+	if (has_category()) {
+		$post_meta = sprintf(
+			"%s in %s",
+			$post_meta,
+			get_the_category_list(', ')
+		);
+	}
 
 	if (has_tag()) {
 		$post_meta = sprintf(
@@ -369,6 +376,26 @@ function mbt_register_nav_menus() {
 	]);
 }
 add_action('init', 'mbt_register_nav_menus');
+
+/**
+ * Register Custom Post Types.
+ */
+function mbt_register_cpt() {
+	// FAQ
+	register_post_type('mbt_faq', [
+		'labels' => [
+			'name' => 'FAQs',
+			'singular_name' => 'FAQ',
+		],
+		'public' => true,
+		'has_archive' => true,
+		'supports' => ['title', 'editor', 'excerpt', 'thumbnail', 'author'],
+		'rewrite' => [
+			'slug' => 'faq',
+		],
+	]);
+}
+add_action('init', 'mbt_register_cpt');
 
 /**
  * Register widget areas (a.k.a. sidebars).
