@@ -2,6 +2,7 @@
 
 require_once('includes/Bootstrap_5_WP_Nav_Menu_Walker.php');
 require_once('includes/bs5-pagination.php');
+require_once('includes/bootscore-pagination.php');
 
 /**
  * Setup theme.
