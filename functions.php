@@ -141,6 +141,30 @@ function mbt_navbar_brand() {
 	}
 }
 
+function mbt_post_meta($display = true) {
+	$post_meta = sprintf(
+		"Post published %s at %s by %s in %s",
+		get_the_date(),
+		get_the_time(),
+		get_the_author(),
+		get_the_category_list(', ')
+	);
+
+	if (has_tag()) {
+		$post_meta = sprintf(
+			"%s with tags %s",
+			$post_meta,
+			get_the_tag_list('', ', ')
+		);
+	}
+
+	if ($display) {
+		echo $post_meta;
+	} else {
+		return $post_meta;
+	}
+}
+
 /**
  * Register neccessary scripts and styles.
  *
