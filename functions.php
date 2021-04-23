@@ -347,6 +347,17 @@ add_filter('the_excerpt', 'mbt_filter_bad_words');
 add_filter('the_title', 'mbt_filter_bad_words');
 
 /**
+ * Add class to next/previous posts links
+ *
+ * @return string;
+ */
+function mbt_filter_pagination_links() {
+	return 'class="btn btn-secondary"';
+}
+add_filter('next_posts_link_attributes', 'mbt_filter_pagination_links', 10, 0);
+add_filter('previous_posts_link_attributes', 'mbt_filter_pagination_links', 10, 0);
+
+/**
  * Register navigation menus.
  */
 function mbt_register_nav_menus() {
