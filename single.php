@@ -26,6 +26,7 @@ if (get_theme_mod('blog_sidebar') === 'left') {
 						// Load next post to display
 						the_post();
 						get_template_part('template-parts/content');
+						get_template_part('template-parts/post-navigation');
 					?>
 					<!-- End post -->
 				<?php endwhile; ?>

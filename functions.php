@@ -367,6 +367,17 @@ add_filter('next_posts_link_attributes', 'mbt_filter_pagination_links', 10, 0);
 add_filter('previous_posts_link_attributes', 'mbt_filter_pagination_links', 10, 0);
 
 /**
+ * Add class to next/previous post links
+ *
+ * @return string;
+ */
+function mbt_filter_post_nav_link($link) {
+	return str_replace('<a href=', '<a class="page-link" href=', $link);
+}
+add_filter('previous_post_link', 'mbt_filter_post_nav_link', 10, 1);
+add_filter('next_post_link', 'mbt_filter_post_nav_link', 10, 1);
+
+/**
  * Register navigation menus.
  */
 function mbt_register_nav_menus() {
