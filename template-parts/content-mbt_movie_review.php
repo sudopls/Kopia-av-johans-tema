@@ -12,7 +12,7 @@
 
 	<footer>
 		<div class="card-meta text-muted small mb-2">
-			<?php mbt_post_meta(); ?>
+			<?php mbt_movie_review_meta(); ?>
 		</div>
 	</footer>
 </article>
