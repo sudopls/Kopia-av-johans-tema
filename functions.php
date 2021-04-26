@@ -4,6 +4,10 @@ require_once('includes/Bootstrap_5_WP_Nav_Menu_Walker.php');
 require_once('includes/bs5-pagination.php');
 require_once('includes/bootscore-pagination.php');
 
+// Register our Custom Post Types and Custom Taxonomies
+require_once('includes/custom-post-types.php');
+require_once('includes/custom-taxonomies.php');
+
 /**
  * Setup theme.
  *
@@ -424,26 +428,6 @@ function mbt_register_nav_menus() {
 	]);
 }
 add_action('init', 'mbt_register_nav_menus');
-
-/**
- * Register Custom Post Types.
- */
-function mbt_register_cpt() {
-	// FAQ
-	register_post_type('mbt_faq', [
-		'labels' => [
-			'name' => 'FAQs',
-			'singular_name' => 'FAQ',
-		],
-		'public' => true,
-		'has_archive' => true,
-		'supports' => ['title', 'editor', 'excerpt', 'thumbnail', 'author'],
-		'rewrite' => [
-			'slug' => 'faq',
-		],
-	]);
-}
-// add_action('init', 'mbt_register_cpt');
 
 /**
  * Register widget areas (a.k.a. sidebars).
