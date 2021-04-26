@@ -2,16 +2,25 @@
 	<?php
 		if (is_category()) {
 			$title = single_cat_title('Category: ', false);
+
 		} else if (is_tag()) {
 			$title = single_tag_title('Tag: ', false);
+
 		} else if (is_post_type_archive()) {
 			$title = post_type_archive_title('', false);
+
+		} else if (is_tax('mbt_movie_genre')) {
+			$title = single_term_title('Genre: ', false);
+
 		} else if (is_home()) {
 			$title = "Blog";
+
 		} else if (is_search()) {
 			$title = sprintf('Search results for "%s"', htmlspecialchars($_REQUEST['s']));
+
 		} else {
 			$title = get_the_title();
+
 		}
 	?>
 	<div id="site-header">
