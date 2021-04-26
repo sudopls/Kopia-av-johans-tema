@@ -5,6 +5,9 @@
 
 $related_reviews = new WP_Query([
 	'post_type' => 'mbt_movie_review',
+	'posts_per_page' => 3,
+	'orderby' => 'title',
+	'order' => 'asc',
 ]);
 
 if (!$related_reviews->have_posts()) {
