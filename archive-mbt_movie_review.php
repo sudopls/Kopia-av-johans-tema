@@ -2,15 +2,11 @@
 get_header();
 ?>
 
+<!-- archive-mbt_movie_review.php -->
 <main class="container mt-3">
-
 	<?php if (!get_header_image()) : ?>
 		<h1><?php post_type_archive_title(''); ?></h1>
 	<?php endif; ?>
-
-	<pre>archive-mbt_movie_review.php</pre>
-
-	<hr />
 
 	<div class="row">
 		<div class="col-md-9 content">

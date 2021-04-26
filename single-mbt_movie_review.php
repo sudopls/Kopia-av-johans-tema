@@ -2,12 +2,8 @@
 get_header();
 ?>
 
+<!-- single-mbt_movie_review.php -->
 <main class="container">
-
-	<pre>single-mbt_movie_review.php</pre>
-
-	<hr />
-
 	<div class="row">
 		<div class="col-md-9 content">
 			<!-- Do we have any posts to display? -->

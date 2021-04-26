@@ -9,15 +9,11 @@ if (get_theme_mod('blog_sidebar') === 'left') {
 }
 ?>
 
+<!-- tag.php -->
 <main class="container">
-
-	<pre>tag.php</pre>
-
 	<?php if (!get_header_image()) : ?>
 		<h1><?php single_tag_title('Tag: '); ?></h1>
 	<?php endif; ?>
-
-	<hr />
 
 	<div class="row">
 		<div class="col-md-9 content <?php echo $content_order; ?>">

@@ -2,13 +2,12 @@
 get_header();
 ?>
 
+<!-- search.php -->
 <main class="container mt-3">
 
 	<?php if (!get_header_image()) : ?>
 		<h1>Search results for "<?php echo htmlspecialchars($_REQUEST['s']); ?>"</h1>
 	<?php endif; ?>
-
-	<pre>search.php</pre>
 
 	<?php get_search_form(); ?>
 

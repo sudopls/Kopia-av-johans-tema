@@ -2,13 +2,9 @@
 get_header();
 ?>
 
+<!-- 404.php -->
 <main class="container mt-3">
-
 	<h1>Page Not Found</h1>
-
-	<pre>404.php</pre>
-
-	<hr />
 
 	<div class="text-center mb-5">
 		<img src="https://http.cat/404" class="img-fluid" alt="A cat hiding under a stack of papers" title="Peek-a-boo!">
