@@ -18,7 +18,7 @@ get_header();
 					<?php
 						// Load next post to display
 						the_post();
-						get_template_part('template-parts/content', 'excerpt');
+						get_template_part('template-parts/content-mbt_movie_review', 'excerpt');
 					?>
 					<!-- End post -->
 				<?php endwhile; ?>

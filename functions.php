@@ -269,6 +269,43 @@ function mbt_post_meta($display = true) {
 	}
 }
 
+function mbt_movie_review_meta($display = true) {
+	global $post;
+
+	$post_meta = sprintf(
+		"Review published %s at %s by %s",
+		get_the_date(),
+		get_the_time(),
+		get_the_author()
+	);
+
+	// $post_id = $post->ID;
+	$post_id = get_the_ID();
+
+	$genres = get_the_terms($post_id, 'mbt_movie_genre');
+
+	if ($genres) {
+		$genre_links = [];
+		foreach ($genres as $genre) {
+			$genre_url = get_term_link($genre, 'mbt_movie_genre');
+			$genre_link = sprintf('<a href="%s">%s</a>', $genre_url, $genre->name);
+			array_push($genre_links, $genre_link);
+		}
+
+		$post_meta = sprintf(
+			"%s in %s",
+			$post_meta,
+			implode(', ', $genre_links)
+		);
+	}
+
+	if ($display) {
+		echo $post_meta;
+	} else {
+		return $post_meta;
+	}
+}
+
 /**
  * Register neccessary scripts and styles.
  *
