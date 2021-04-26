@@ -3,6 +3,14 @@
  * Show movie reviews related to current review.
  */
 
+$related_reviews = new WP_Query([
+	'post_type' => 'mbt_movie_review',
+]);
+
+if (!$related_reviews->have_posts()) {
+	return;
+}
+
 ?>
 
 <hr class="my-4" />
@@ -10,39 +18,33 @@
 <h2>Related Movie Reviews</h2>
 
 <div class="row">
-	<div class="col">
-		<article class="card">
-			<img src="http://placekitten.com/260/180" class="card-img-top" alt="">
-			<div class="card-body">
-				<h3 class="h5 card-title">Review Title</h3>
-				<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima non ipsa praesentium consectetur sed illum, fugiat cumque enim molestiae perspiciatis.</p>
+	<?php while ($related_reviews->have_posts()): $related_reviews->the_post(); ?>
 
-				<a href="#" class="btn btn-secondary">Read more &raquo;</a>
-			</div>
-		</article>
-	</div>
+		<div class="col-md-6 col-lg-4">
+			<article class="card mb-4">
+				<?php the_post_thumbnail('medium', ['class' => 'card-img-top img-fluid']); ?>
 
-	<div class="col">
-		<article class="card">
-			<img src="http://placekitten.com/260/180" class="card-img-top" alt="">
-			<div class="card-body">
-				<h3 class="h5 card-title">Review Title</h3>
-				<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima non ipsa praesentium consectetur sed illum, fugiat cumque enim molestiae perspiciatis.</p>
+				<div class="card-body">
+					<h3 class="h5 card-title">
+						<a href="<?php the_permalink(); ?>">
+							<?php the_title(); ?>
+						</a>
+					</h3>
 
-				<a href="#" class="btn btn-secondary">Read more &raquo;</a>
-			</div>
-		</article>
-	</div>
+					<p class="card-text">
+						<?php the_excerpt(); ?>
+					</p>
 
-	<div class="col">
-		<article class="card">
-			<img src="http://placekitten.com/260/180" class="card-img-top" alt="">
-			<div class="card-body">
-				<h3 class="h5 card-title">Review Title</h3>
-				<p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima non ipsa praesentium consectetur sed illum, fugiat cumque enim molestiae perspiciatis.</p>
+					<div>
+						<a href="<?php the_permalink(); ?>" class="btn btn-secondary">Read more &raquo;</a>
+					</div>
+				</div>
+			</article>
+		</div>
 
-				<a href="#" class="btn btn-secondary">Read more &raquo;</a>
-			</div>
-		</article>
-	</div>
+	<?php endwhile; ?>
+
 </div>
+
+<?php
+wp_reset_postdata();

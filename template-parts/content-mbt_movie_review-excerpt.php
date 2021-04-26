@@ -25,6 +25,10 @@
 						<!-- after the_excerpt(); -->
 					</div>
 
+					<div>
+						<a href="<?php the_permalink(); ?>" class="btn btn-secondary">Read more &raquo;</a>
+					</div>
+
 					<footer>
 						<div class="card-meta text-muted small mb-2">
 							<?php mbt_movie_review_meta(); ?>

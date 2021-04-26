@@ -370,7 +370,7 @@ add_filter('excerpt_more', 'mbt_filter_excerpt_more');
 function mbt_filter_the_excerpt($excerpt) {
 	return $excerpt . '<div><a href="' . get_the_permalink() . '" class="btn btn-primary">Read more &raquo;</a></div>';
 }
-add_filter('the_excerpt', 'mbt_filter_the_excerpt');
+// add_filter('the_excerpt', 'mbt_filter_the_excerpt');
 
 /**
  * Filters content from bad words and replaces them with asterisk.
