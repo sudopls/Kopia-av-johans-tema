@@ -5,8 +5,8 @@ require_once('includes/bs5-pagination.php');
 require_once('includes/bootscore-pagination.php');
 
 // Register our Custom Post Types and Custom Taxonomies
-require_once('includes/custom-post-types.php');
-require_once('includes/custom-taxonomies.php');
+// require_once('includes/custom-post-types.php');
+// require_once('includes/custom-taxonomies.php');
 
 /**
  * Setup theme.
