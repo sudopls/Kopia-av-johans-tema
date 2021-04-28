@@ -12,7 +12,7 @@ $post_id = get_the_ID();
 $genres = get_the_terms($post_id, 'mbt_movie_genre') ?: [];
 
 $names = array_map(function($genre) {
-	return $genre->name;
+	return sprintf('<a href="%s">%s</a>', get_term_link($genre, 'mbt_movie_genre'), $genre->name);
 }, $genres);
 
 $subtitle = implode(', ', $names);
@@ -28,8 +28,8 @@ $subtitle = implode(', ', $names);
 	>
 	<div class="header-text-wrapper">
 		<div class="header-text">
-			<div class="display-4"><?php echo $title; ?></div>
-			<div class="h4"><?php echo $subtitle; ?></div>
+			<div class="display-4 header-title"><?php echo $title; ?></div>
+			<div class="h4 header-subtitle"><?php echo $subtitle; ?></div>
 		</div>
 	</div>
 </div>

@@ -36,6 +36,16 @@ Text Domain: mybasictheme
 	color: #fff;
 }
 
+#site-header .header-text .header-subtitle {
+	margin-top: 1rem;
+}
+#site-header .header-text .header-subtitle a {
+	color: #fff;
+}
+#site-header .header-text .header-subtitle a:hover {
+	color: #ddd;
+}
+
 .text-justify {
 	text-align: justify;
 }
