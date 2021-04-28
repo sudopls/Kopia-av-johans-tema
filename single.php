@@ -10,7 +10,7 @@ if (get_theme_mod('blog_sidebar') === 'left') {
 ?>
 
 <!-- single.php -->
-<main class="container">
+<main class="container mt-3">
 	<div class="row">
 		<div class="col-md-9 content <?php echo $content_order; ?>">
 			<!-- Do we have any posts to display? -->

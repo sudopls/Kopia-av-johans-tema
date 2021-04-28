@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <!-- single-mbt_movie_review.php -->
-<main class="container">
+<main class="container mt-3">
 	<div class="row">
 		<div class="col-md-9 content">
 			<!-- Do we have any posts to display? -->

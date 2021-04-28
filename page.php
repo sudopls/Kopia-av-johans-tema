@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <!-- page.php -->
-<main class="container">
+<main class="container mt-3">
 	<!-- Do we have any posts to display? -->
 	<?php if (have_posts()) : ?>
 		<!-- Yay, we has posts do display! -->

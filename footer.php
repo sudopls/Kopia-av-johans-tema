@@ -1,4 +1,4 @@
-	<footer class="site-footer mt-3 py-3 bg-dark text-white">
+	<footer class="site-footer mt-5 py-4 bg-dark text-white">
 		<?php get_sidebar('footer'); ?>
 	</footer>
 
