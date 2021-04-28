@@ -17,13 +17,18 @@ $names = array_map(function($genre) {
 
 $subtitle = implode(', ', $names);
 
+if (has_post_thumbnail()) {
+	$post_thumbnail_id = get_post_thumbnail_id();
+	$header_image_src = wp_get_attachment_image_src($post_thumbnail_id, 'full')[0] ?? '';
+} else {
+	$header_image_src = get_header_image();
+}
+
 ?>
 
 <div id="site-header">
-	<img src="<?php header_image(); ?>"
-		width="<?php echo absint(get_custom_header()->width); ?>"
-		height="<?php echo absint(get_custom_header()->height); ?>"
-		alt="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
+	<img src="<?php echo $header_image_src; ?>"
+		alt="<?php echo esc_attr($title); ?>"
 		class="img-fluid"
 	>
 	<div class="header-text-wrapper">

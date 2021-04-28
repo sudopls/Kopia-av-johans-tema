@@ -1,6 +1,5 @@
 <article>
 	<header class="mb-3">
-		<?php the_post_thumbnail('large', ['class' => 'img-fluid mb-2']); ?>
 		<?php if (!get_header_image()) : ?>
 			<h1><?php the_title(); ?></h1>
 		<?php endif; ?>
