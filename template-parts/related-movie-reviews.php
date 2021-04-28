@@ -26,6 +26,7 @@ $slugs = array_map(function($genre) {
 $related_reviews = new WP_Query([
 	'post_type' => 'mbt_movie_review',
 	'posts_per_page' => 3,
+	'post__not_in' => [$post_id],
 	'tax_query' => [
 		[
 			'taxonomy' => 'mbt_movie_genre',
