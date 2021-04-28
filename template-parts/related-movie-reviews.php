@@ -3,6 +3,26 @@
  * Show movie reviews related to current review.
  */
 
+// get genres for current movie review
+$post_id = get_the_ID();
+$genres = get_the_terms($post_id, 'mbt_movie_genre');
+
+// bail if no movie genres is set for this review
+if (!$genres) {
+	return;
+}
+
+/*
+$slugs = [];
+foreach ($genres as $genre) {
+	array_push($slugs, $genre->slug);
+}
+*/
+
+$slugs = array_map(function($genre) {
+	return $genre->slug;
+}, $genres);
+
 $related_reviews = new WP_Query([
 	'post_type' => 'mbt_movie_review',
 	'posts_per_page' => 3,
@@ -10,7 +30,7 @@ $related_reviews = new WP_Query([
 		[
 			'taxonomy' => 'mbt_movie_genre',
 			'field' => 'slug',
-			'terms' => ['action', 'sci-fi'],
+			'terms' => $slugs,
 		],
 	],
 ]);
