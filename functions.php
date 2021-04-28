@@ -58,6 +58,10 @@ function mbt_theme_setup() {
 	 */
 	add_image_size('featured-image-thumb', 520, 9999);
 
+	/**
+	 * Load translation files for textdomain 'mybasictheme'
+	 */
+	load_theme_textdomain('mybasictheme', get_template_directory() . '/languages');
 }
 add_action('after_setup_theme', 'mbt_theme_setup');
 
@@ -244,7 +248,7 @@ function mbt_navbar_brand() {
 
 function mbt_post_meta($display = true) {
 	$post_meta = sprintf(
-		"Post published %s at %s by %s",
+		__("Post published %s at %s by %s", "mybasictheme"),
 		get_the_date(),
 		get_the_time(),
 		get_the_author()
@@ -277,7 +281,7 @@ function mbt_movie_review_meta($display = true) {
 	global $post;
 
 	$post_meta = sprintf(
-		"Review published %s at %s by %s",
+		__("Review published %s at %s by %s", "mybasictheme"),
 		get_the_date(),
 		get_the_time(),
 		get_the_author()
@@ -297,7 +301,7 @@ function mbt_movie_review_meta($display = true) {
 		}
 
 		$post_meta = sprintf(
-			"%s in %s",
+			__("%s in %s", "mybasictheme"),
 			$post_meta,
 			implode(', ', $genre_links)
 		);

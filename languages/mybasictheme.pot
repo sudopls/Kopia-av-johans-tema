@@ -1,0 +1,265 @@
+# Copyright (C) 2021 Johan Nordström
+# This file is distributed under the WTFPL.
+msgid ""
+msgstr ""
+"Project-Id-Version: My Basic Theme 0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mybasictheme\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-04-28T12:07:44+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0-alpha-1a19028\n"
+"X-Domain: mybasictheme\n"
+
+#. Theme Name of the theme
+msgid "My Basic Theme"
+msgstr ""
+
+#. Description of the theme
+msgid "My very first WordPress theme, yayyy!"
+msgstr ""
+
+#. Author of the theme
+msgid "Johan Nordström"
+msgstr ""
+
+#: functions.php:251
+msgid "Post published %s at %s by %s"
+msgstr ""
+
+#: functions.php:284
+msgid "Review published %s at %s by %s"
+msgstr ""
+
+#: functions.php:304
+msgid "%s in %s"
+msgstr ""
+
+#: includes/bs5-pagination.php:14
+msgid "&laquo; Previous"
+msgstr ""
+
+#: includes/bs5-pagination.php:15
+msgid "Next &raquo;"
+msgstr ""
+
+#: includes/custom-post-types.php:10
+#: includes/custom-post-types.php:12
+#: includes/custom-post-types.php:45
+msgid "Movie Reviews"
+msgstr ""
+
+#: includes/custom-post-types.php:11
+#: includes/custom-post-types.php:35
+msgid "Movie Review"
+msgstr ""
+
+#: includes/custom-post-types.php:13
+msgid "All Reviews"
+msgstr ""
+
+#: includes/custom-post-types.php:14
+msgid "Add new"
+msgstr ""
+
+#: includes/custom-post-types.php:15
+msgid "Add new Review"
+msgstr ""
+
+#: includes/custom-post-types.php:16
+msgid "Edit Review"
+msgstr ""
+
+#: includes/custom-post-types.php:17
+msgid "New Review"
+msgstr ""
+
+#: includes/custom-post-types.php:18
+msgid "View Review"
+msgstr ""
+
+#: includes/custom-post-types.php:19
+msgid "View Reviews"
+msgstr ""
+
+#: includes/custom-post-types.php:20
+msgid "Search Reviews"
+msgstr ""
+
+#: includes/custom-post-types.php:21
+msgid "No Movie Reviews found"
+msgstr ""
+
+#: includes/custom-post-types.php:22
+msgid "No Movie Reviews found in trash"
+msgstr ""
+
+#: includes/custom-post-types.php:23
+#: includes/custom-post-types.php:41
+msgid "Parent Movie Review:"
+msgstr ""
+
+#: includes/custom-post-types.php:24
+msgid "Featured image for this Movie Review"
+msgstr ""
+
+#: includes/custom-post-types.php:25
+msgid "Set featured image for this Movie Review"
+msgstr ""
+
+#: includes/custom-post-types.php:26
+msgid "Remove featured image for this Movie Review"
+msgstr ""
+
+#: includes/custom-post-types.php:27
+msgid "Use as featured image for this Movie Review"
+msgstr ""
+
+#: includes/custom-post-types.php:28
+msgid "Movie Review archives"
+msgstr ""
+
+#: includes/custom-post-types.php:29
+msgid "Insert into Movie Review"
+msgstr ""
+
+#: includes/custom-post-types.php:30
+msgid "Upload to this Movie Review"
+msgstr ""
+
+#: includes/custom-post-types.php:31
+msgid "Filter Movie Reviews list"
+msgstr ""
+
+#: includes/custom-post-types.php:32
+msgid "Movie Reviews list navigation"
+msgstr ""
+
+#: includes/custom-post-types.php:33
+msgid "Movie Reviews list"
+msgstr ""
+
+#: includes/custom-post-types.php:34
+msgid "Movie Reviews attributes"
+msgstr ""
+
+#: includes/custom-post-types.php:36
+msgid "Review published"
+msgstr ""
+
+#: includes/custom-post-types.php:37
+msgid "Review published privately."
+msgstr ""
+
+#: includes/custom-post-types.php:38
+msgid "Review reverted to draft."
+msgstr ""
+
+#: includes/custom-post-types.php:39
+msgid "Review scheduled"
+msgstr ""
+
+#: includes/custom-post-types.php:40
+msgid "Review updated."
+msgstr ""
+
+#: includes/custom-taxonomies.php:10
+#: includes/custom-taxonomies.php:12
+#: includes/custom-taxonomies.php:35
+msgid "Genres"
+msgstr ""
+
+#: includes/custom-taxonomies.php:11
+msgid "Genre"
+msgstr ""
+
+#: includes/custom-taxonomies.php:13
+msgid "All Genres"
+msgstr ""
+
+#: includes/custom-taxonomies.php:14
+msgid "Edit Genre"
+msgstr ""
+
+#: includes/custom-taxonomies.php:15
+msgid "View Genre"
+msgstr ""
+
+#: includes/custom-taxonomies.php:16
+msgid "Update Genre name"
+msgstr ""
+
+#: includes/custom-taxonomies.php:17
+msgid "Add new Genre"
+msgstr ""
+
+#: includes/custom-taxonomies.php:18
+msgid "New Genre name"
+msgstr ""
+
+#: includes/custom-taxonomies.php:19
+msgid "Parent Genre"
+msgstr ""
+
+#: includes/custom-taxonomies.php:20
+msgid "Parent Genre:"
+msgstr ""
+
+#: includes/custom-taxonomies.php:21
+msgid "Search Genres"
+msgstr ""
+
+#: includes/custom-taxonomies.php:22
+msgid "Popular Genres"
+msgstr ""
+
+#: includes/custom-taxonomies.php:23
+msgid "Separate Genres with commas"
+msgstr ""
+
+#: includes/custom-taxonomies.php:24
+msgid "Add or remove Genres"
+msgstr ""
+
+#: includes/custom-taxonomies.php:25
+msgid "Choose from the most used Genres"
+msgstr ""
+
+#: includes/custom-taxonomies.php:26
+msgid "No Genres found"
+msgstr ""
+
+#: includes/custom-taxonomies.php:27
+msgid "No Genres"
+msgstr ""
+
+#: includes/custom-taxonomies.php:28
+msgid "Genres list navigation"
+msgstr ""
+
+#: includes/custom-taxonomies.php:29
+msgid "Genres list"
+msgstr ""
+
+#: includes/custom-taxonomies.php:30
+msgid "Back to Genres"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Page with Left Sidebar"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Page with Right Sidebar"
+msgstr ""
+
+#: template-parts/content-excerpt.php:30
+msgid "Read more &raquo;"
+msgstr ""
+
+#: template-parts/header-image.php:16
+msgid "Blog"
+msgstr ""

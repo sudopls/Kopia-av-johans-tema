@@ -13,7 +13,7 @@
 			$title = single_term_title('Genre: ', false);
 
 		} else if (is_home()) {
-			$title = "Blog";
+			$title = __("Blog", "mybasictheme");
 
 		} else if (is_search()) {
 			$title = sprintf('Search results for "%s"', htmlspecialchars($_REQUEST['s']));
