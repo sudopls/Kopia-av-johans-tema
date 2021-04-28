@@ -480,3 +480,22 @@ function mbt_widgets_init() {
 	]);
 }
 add_action('widgets_init', 'mbt_widgets_init');
+
+/**
+ * var_dump variable
+ *
+ * @param mixed $var Variable to dump
+ * @param boolean $wrap Wrap output in <pre>-tag?
+ * @return void
+ */
+function dump($var, $wrap = true) {
+	if ($wrap) {
+		echo "<pre>";
+	}
+
+	var_dump($var);
+
+	if ($wrap) {
+		echo "</pre>";
+	}
+}
