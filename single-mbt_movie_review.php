@@ -1,5 +1,6 @@
 <?php
 get_header();
+get_template_part('template-parts/header-image');
 ?>
 
 <!-- single-mbt_movie_review.php -->

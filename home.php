@@ -1,5 +1,6 @@
 <?php
 get_header();
+get_template_part('template-parts/header-image');
 
 $content_order = "";
 $sidebar_order = "";
