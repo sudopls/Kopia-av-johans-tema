@@ -17,5 +17,7 @@
 </article>
 
 <div class="d-flex">
-	<a href="<?php echo get_post_type_archive_link('mbt_movie_review'); ?>" class="page-link">&laquo; All Movie Reviews</a>
+	<a href="<?php echo get_post_type_archive_link('mbt_movie_review'); ?>" class="page-link">
+		<?php _e('&laquo; All Movie Reviews', 'mybasictheme'); ?>
+	</a>
 </div>

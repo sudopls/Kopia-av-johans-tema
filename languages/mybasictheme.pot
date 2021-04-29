@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-04-28T12:07:44+02:00\n"
+"POT-Creation-Date: 2021-04-29T10:16:15+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0-alpha-1a19028\n"
 "X-Domain: mybasictheme\n"
@@ -26,16 +26,83 @@ msgstr ""
 msgid "Johan Nordström"
 msgstr ""
 
-#: functions.php:251
-msgid "Post published %s at %s by %s"
+#. translators: Used in blog post information, if a post is posted in one or more categories. Example: "Post published 23 april, 2021 at 09:37 by jn"
+#: functions.php:252
+msgid "Post published %1$s at %2$s by %3$s"
 msgstr ""
 
-#: functions.php:284
-msgid "Review published %s at %s by %s"
+#. translators: Used in blog post information, if a post is posted in one or more categories. Example: "Post published by jn in Ipsums"
+#: functions.php:261
+msgctxt "blog post category"
+msgid "%1$s in %2$s"
 msgstr ""
 
-#: functions.php:304
-msgid "%s in %s"
+#. translators: Used in blog post information, if a post has one or more tags. Example: "Post published by jn with tags grafitti, skate"
+#: functions.php:270
+msgid "%1$s with tags %2$s"
+msgstr ""
+
+#. translators: Used in movie review metadata. Example: "Review published 23 april, 2021 at 09:37 by jn"
+#: functions.php:288
+msgid "Review published %1$s at %2$s by %3$s"
+msgstr ""
+
+#. translators: Used in movie review metadata, if a movie has one or more genres. Example: "Review published by jn in Bromance, Wi-fi"
+#: functions.php:309
+msgctxt "movie review genre"
+msgid "%1$s in %2$s"
+msgstr ""
+
+#: functions.php:380
+#: template-parts/content-excerpt.php:30
+#: template-parts/content-mbt_movie_review-excerpt.php:29
+#: template-parts/related-movie-reviews.php:69
+msgid "Read more &raquo;"
+msgstr ""
+
+#: functions.php:436
+msgid "Header Menu"
+msgstr ""
+
+#: functions.php:449
+msgid "Blog Sidebar"
+msgstr ""
+
+#: functions.php:451
+msgid "Sidebar on blog index, category archive and single blog posts."
+msgstr ""
+
+#: functions.php:460
+msgid "Movie Review Sidebar"
+msgstr ""
+
+#: functions.php:462
+msgid "Sidebar on movie reviews archive and single movie reviews."
+msgstr ""
+
+#: functions.php:471
+msgid "Page Sidebar"
+msgstr ""
+
+#: functions.php:473
+msgid "Sidebar on pages."
+msgstr ""
+
+#: functions.php:482
+msgid "Footer"
+msgstr ""
+
+#: functions.php:484
+msgid "Page Footer 📄🦶🏻."
+msgstr ""
+
+#: home.php:16
+#: template-parts/header-image.php:16
+msgid "Blog"
+msgstr ""
+
+#: home.php:38
+msgid "Sorry, no posts found."
 msgstr ""
 
 #: includes/bs5-pagination.php:14
@@ -256,10 +323,35 @@ msgstr ""
 msgid "Page with Right Sidebar"
 msgstr ""
 
-#: template-parts/content-excerpt.php:30
-msgid "Read more &raquo;"
+#: template-parts/content-mbt_movie_review.php:21
+msgid "&laquo; All Movie Reviews"
 msgstr ""
 
-#: template-parts/header-image.php:16
-msgid "Blog"
+#: template-parts/header-image.php:4
+msgid "Category: "
+msgstr ""
+
+#: template-parts/header-image.php:7
+msgid "Tag: "
+msgstr ""
+
+#: template-parts/header-image.php:13
+msgid "Genre: "
+msgstr ""
+
+#. translators: Search results for query %s
+#: template-parts/header-image.php:21
+msgid "Search results for \"%s\""
+msgstr ""
+
+#: template-parts/posts-pagination-simple.php:2
+msgid "Previous page"
+msgstr ""
+
+#: template-parts/posts-pagination-simple.php:3
+msgid "Next page"
+msgstr ""
+
+#: template-parts/related-movie-reviews.php:47
+msgid "Related Movie Reviews"
 msgstr ""

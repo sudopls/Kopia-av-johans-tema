@@ -248,7 +248,8 @@ function mbt_navbar_brand() {
 
 function mbt_post_meta($display = true) {
 	$post_meta = sprintf(
-		__("Post published %s at %s by %s", "mybasictheme"),
+		// translators: Used in blog post information, if a post is posted in one or more categories. Example: "Post published 23 april, 2021 at 09:37 by jn"
+		__('Post published %1$s at %2$s by %3$s', 'mybasictheme'),
 		get_the_date(),
 		get_the_time(),
 		get_the_author()
@@ -256,7 +257,8 @@ function mbt_post_meta($display = true) {
 
 	if (has_category()) {
 		$post_meta = sprintf(
-			"%s in %s",
+			// translators: Used in blog post information, if a post is posted in one or more categories. Example: "Post published by jn in Ipsums"
+			_x('%1$s in %2$s', 'blog post category', 'mybasictheme'),
 			$post_meta,
 			get_the_category_list(', ')
 		);
@@ -264,7 +266,8 @@ function mbt_post_meta($display = true) {
 
 	if (has_tag()) {
 		$post_meta = sprintf(
-			"%s with tags %s",
+			// translators: Used in blog post information, if a post has one or more tags. Example: "Post published by jn with tags grafitti, skate"
+			__('%1$s with tags %2$s', 'mybasictheme'),
 			$post_meta,
 			get_the_tag_list('', ', ')
 		);
@@ -281,7 +284,8 @@ function mbt_movie_review_meta($display = true) {
 	global $post;
 
 	$post_meta = sprintf(
-		__("Review published %s at %s by %s", "mybasictheme"),
+		// translators: Used in movie review metadata. Example: "Review published 23 april, 2021 at 09:37 by jn"
+		__('Review published %1$s at %2$s by %3$s', 'mybasictheme'),
 		get_the_date(),
 		get_the_time(),
 		get_the_author()
@@ -301,7 +305,8 @@ function mbt_movie_review_meta($display = true) {
 		}
 
 		$post_meta = sprintf(
-			__("%s in %s", "mybasictheme"),
+			// translators: Used in movie review metadata, if a movie has one or more genres. Example: "Review published by jn in Bromance, Wi-fi"
+			_x('%1$s in %2$s', 'movie review genre', 'mybasictheme'),
 			$post_meta,
 			implode(', ', $genre_links)
 		);
@@ -372,7 +377,7 @@ add_filter('excerpt_more', 'mbt_filter_excerpt_more');
  * @return string
  */
 function mbt_filter_the_excerpt($excerpt) {
-	return $excerpt . '<div><a href="' . get_the_permalink() . '" class="btn btn-primary">Read more &raquo;</a></div>';
+	return $excerpt . '<div><a href="' . get_the_permalink() . '" class="btn btn-primary">' . __('Read more &raquo;', 'mybasictheme') . '</a></div>';
 }
 // add_filter('the_excerpt', 'mbt_filter_the_excerpt');
 
@@ -428,7 +433,7 @@ add_filter('next_post_link', 'mbt_filter_post_nav_link', 10, 1);
 function mbt_register_nav_menus() {
 	// register theme menu locations
 	register_nav_menus([
-		'header-menu' => 'Header Menu',
+		'header-menu' => __('Header Menu', 'mybasictheme'),
 	]);
 }
 add_action('init', 'mbt_register_nav_menus');
@@ -441,9 +446,9 @@ add_action('init', 'mbt_register_nav_menus');
 function mbt_widgets_init() {
 	// Blog widget area
 	register_sidebar([
-		'name' => 'Blog Sidebar',
+		'name' => __('Blog Sidebar', 'mybasictheme'),
 		'id' => 'blog-sidebar',
-		'description' => 'Sidebar on blog index, category archive and single blog posts.',
+		'description' => __('Sidebar on blog index, category archive and single blog posts.', 'mybasictheme'),
 		'before_widget' => '<div id="%1$s" class="card mb-3 widget %2$s"><div class="card-body">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="widget-title h5">',
@@ -452,9 +457,9 @@ function mbt_widgets_init() {
 
 	// Movie Review widget area
 	register_sidebar([
-		'name' => 'Movie Review Sidebar',
+		'name' => __('Movie Review Sidebar', 'mybasictheme'),
 		'id' => 'movie-review-sidebar',
-		'description' => 'Sidebar on movie reviews archive and single movie reviews.',
+		'description' => __('Sidebar on movie reviews archive and single movie reviews.', 'mybasictheme'),
 		'before_widget' => '<div id="%1$s" class="card mb-3 widget %2$s"><div class="card-body">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="widget-title h5">',
@@ -463,9 +468,9 @@ function mbt_widgets_init() {
 
 	// Page widget area
 	register_sidebar([
-		'name' => 'Page Sidebar',
+		'name' => __('Page Sidebar', 'mybasictheme'),
 		'id' => 'page-sidebar',
-		'description' => 'Sidebar on pages.',
+		'description' => __('Sidebar on pages.', 'mybasictheme'),
 		'before_widget' => '<div id="%1$s" class="card mb-3 widget %2$s"><div class="card-body">',
 		'after_widget' => '</div></div>',
 		'before_title' => '<h3 class="widget-title h5">',
@@ -474,9 +479,9 @@ function mbt_widgets_init() {
 
 	// Footer widget area
 	register_sidebar([
-		'name' => 'Footer',
+		'name' => __('Footer', 'mybasictheme'),
 		'id' => 'sidebar-footer',
-		'description' => 'Page Footer 📄🦶🏻.',
+		'description' => __('Page Footer 📄🦶🏻.', 'mybasictheme'),
 		'before_widget' => '<div id="%1$s" class="text-justify col widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title h5">',

@@ -27,7 +27,7 @@
 
 					<div>
 						<a href="<?php the_permalink(); ?>" class="btn btn-secondary">
-							<?php _e("Read more &raquo;", "mybasictheme"); ?>
+							<?php _e('Read more &raquo;', 'mybasictheme'); ?>
 						</a>
 					</div>
 

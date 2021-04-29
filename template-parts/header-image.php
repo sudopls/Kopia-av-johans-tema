@@ -1,22 +1,26 @@
 <?php if (get_header_image()) : ?>
 	<?php
 		if (is_category()) {
-			$title = single_cat_title('Category: ', false);
+			$title = single_cat_title(__('Category: ', 'mybasictheme'), false);
 
 		} else if (is_tag()) {
-			$title = single_tag_title('Tag: ', false);
+			$title = single_tag_title(__('Tag: ', 'mybasictheme'), false);
 
 		} else if (is_post_type_archive()) {
 			$title = post_type_archive_title('', false);
 
 		} else if (is_tax('mbt_movie_genre')) {
-			$title = single_term_title('Genre: ', false);
+			$title = single_term_title(__('Genre: ', 'mybasictheme'), false);
 
 		} else if (is_home()) {
-			$title = __("Blog", "mybasictheme");
+			$title = __('Blog', 'mybasictheme');
 
 		} else if (is_search()) {
-			$title = sprintf('Search results for "%s"', htmlspecialchars($_REQUEST['s']));
+			$title = sprintf(
+				// translators: Search results for query %s
+				__('Search results for "%s"', 'mybasictheme'),
+				htmlspecialchars($_REQUEST['s'])
+			);
 
 		} else {
 			$title = get_the_title();

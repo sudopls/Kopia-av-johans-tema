@@ -44,7 +44,7 @@ if (!$related_reviews->have_posts()) {
 
 <hr class="my-4" />
 
-<h2>Related Movie Reviews</h2>
+<h2><?php _e('Related Movie Reviews', 'mybasictheme'); ?></h2>
 
 <div class="row">
 	<?php while ($related_reviews->have_posts()): $related_reviews->the_post(); ?>
@@ -65,7 +65,9 @@ if (!$related_reviews->have_posts()) {
 					</p>
 
 					<div>
-						<a href="<?php the_permalink(); ?>" class="btn btn-secondary">Read more &raquo;</a>
+						<a href="<?php the_permalink(); ?>" class="btn btn-secondary">
+							<?php _e('Read more &raquo;', 'mybasictheme'); ?>
+						</a>
 					</div>
 				</div>
 			</article>

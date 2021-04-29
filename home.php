@@ -13,7 +13,7 @@ if (get_theme_mod('blog_sidebar') === 'left') {
 <!-- home.php -->
 <main class="container mt-3">
 	<?php if (!get_header_image()) : ?>
-		<h1>Blog</h1>
+		<h1><?php _e('Blog', 'mybasictheme'); ?></h1>
 	<?php endif; ?>
 
 	<div class="row">
@@ -35,7 +35,7 @@ if (get_theme_mod('blog_sidebar') === 'left') {
 				<?php get_template_part('template-parts/posts-pagination'); ?>
 				<!-- Pagination end -->
 			<?php else: ?>
-				<p>Sorry, no posts found.</p>
+				<p><?php _e('Sorry, no posts found.', 'mybasictheme'); ?></p>
 			<?php endif; ?>
 		</div><!-- /.col-md-9 -->
 
